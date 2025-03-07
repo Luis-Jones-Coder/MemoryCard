@@ -71,6 +71,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.5);
     backface-visibility: hidden;
+    transition: transform 0.25s  linear;
     
 }
 
@@ -90,6 +91,10 @@ body {
 /* Flip it to show the side with the fruit image */
 .card:hover .back-view{
     transform: rotateY(0);
+}
+
+.card:hover .front-view {
+    transform: rotateY(180deg);
 }
 
 /* Sizing the image card to make the smaller */
