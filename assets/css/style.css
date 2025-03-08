@@ -72,6 +72,10 @@ body {
     box-shadow: 0 3px 10px rgba(0,0,0,0.5);
     backface-visibility: hidden;
     transition: transform 0.25s  linear;
+
+    /* Invalidate all view elements so that when clicking, it ensures that it only returns the li elements. */
+    user-select: none;
+    pointer-events: none;
     
 }
 
@@ -89,11 +93,11 @@ body {
 }
 
 /* Flip it to show the side with the fruit image */
-.card:hover .back-view{
+.card.flip .back-view{
     transform: rotateY(0);
 }
 
-.card:hover .front-view {
+.card.flip .front-view {
     transform: rotateY(180deg);
 }
 
