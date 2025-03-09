@@ -1,11 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
     const cards = document.querySelectorAll(".card");
+    const num_matching = document.querySelector(".game-container h2 span")
+    
     let card_1, card_2;
     let disableCards = false;
+    let matching = 0;
+   
+
 
     // Compare if the images are the same and if they are, clear card_1 and card_2 so that the images remain flipped and stop rotating
     const comparing = (imagen1, imagen2) => {
         if (imagen1 === imagen2) {
+            // Each time we match a card, 1 will be added to the variable.
+            matching++
+            num_matching.innerHTML = matching;
+            if (matching == 8){
+                resetGame();
+            }
             // Remove the event listener so that it cannot be clicked
             card_1.removeEventListener("click", flipIt);
             card_2.removeEventListener("click", flipIt);
@@ -49,6 +60,13 @@ document.addEventListener("DOMContentLoaded", function() {
             comparing(img1, img2);
         }
     };
+    
+    // This function retart the game
+    const resetGame = () =>{
+        matching = 0;
+        card_1 = card_2 = "";
+        num_matching.innerHTML = matching;
+    }
 
     // Make all cards listen to the click event and call the flipIt function
     cards.forEach(function(card) {
