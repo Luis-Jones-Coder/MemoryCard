@@ -29,8 +29,8 @@ body {
     height: 400px;
     width: 400px;
     background-color: #fff;
-    border-radius: 20px;
-    padding: 20px;
+    border-radius: 15px;
+    padding: 40px;
 }
 
 /* Card section */
@@ -48,6 +48,7 @@ body {
     height: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
+    
     	 
 }
 

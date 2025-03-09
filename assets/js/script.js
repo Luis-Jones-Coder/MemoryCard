@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             matching++
             num_matching.innerHTML = matching;
             if (matching == 8){
-                resetGame();
+                 return resetGame();
             }
             // Remove the event listener so that it cannot be clicked
             card_1.removeEventListener("click", flipIt);
@@ -60,12 +60,18 @@ document.addEventListener("DOMContentLoaded", function() {
             comparing(img1, img2);
         }
     };
-    
+
     // This function retart the game
     const resetGame = () =>{
         matching = 0;
         card_1 = card_2 = "";
         num_matching.innerHTML = matching;
+
+        cards.forEach(function(card) {
+            // Make the card flip back to initial position
+            card.classList.remove("flip");
+            card.addEventListener('click', flipIt);
+        });
     }
 
     // Make all cards listen to the click event and call the flipIt function
