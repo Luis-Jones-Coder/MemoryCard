@@ -33,8 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const flipIt = (e) => {
         let card = e.target;
-        card.classList.add("flip");
-
         // Ensure that the next click is on a different card than card_1
         if (card !== card_1 && !disableCards) {
             card.classList.add("flip");
