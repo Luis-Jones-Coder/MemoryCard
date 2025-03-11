@@ -5,13 +5,21 @@ document.addEventListener("DOMContentLoaded", function() {
     let card_1, card_2;
     let disableCards = false;
     let matching = 0;
+    // let sounds = document.querySelector("#sounds");
+    sounds.play()
 
     
+    
 
+    
+      
 
     // Compare if the images are the same and if they are, clear card_1 and card_2 so that the images remain flipped and stop rotating
     const comparing = (imagen1, imagen2) => {
         if (imagen1 === imagen2) {
+            sounds.src = "assets\Music\correct-6033.mp3";
+            sounds.volume = 0.5;
+            sounds.play()
             // Each time we match a card, +1 will be added to the variable.
             matching++
             num_matching.innerHTML = matching;
@@ -27,6 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
             card_2.removeEventListener("click", flipIt);
 
             card_1 = card_2 = "";
+
+            sounds.src = "assets\Music\correct-6033.mp3";
+            sounds.volume = 0.5;
+            sounds.play()
 
             return disableCards = false;
         }
@@ -68,9 +80,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // This function retart the game
     const resetGame = () =>{
+        sounds.src = "assets/Music/mr-23142.mp3";
+        sounds.volume = 0.5;
+        sounds.play()
         matching = 0;
         card_1 = card_2 = "";
-        let disableCards = false;
+        disableCards = false;
         num_matching.innerHTML = matching;
 
         // Creating the array to obtain random numbers with the Math.random function
@@ -90,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
             card.addEventListener('click', flipIt);
         });
     }
+
     resetGame();
 
     // Make all cards listen to the click event and call the flipIt function
