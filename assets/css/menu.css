@@ -1,0 +1,29 @@
+/* import fonts from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+ 
+
+/* General Style  */
+
+/* Removing auto space  */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+/* styling the background image */
+.img-container {
+    background-image: url(assets/image/avocado-5130214_1280.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.inner-container{
+
+}
