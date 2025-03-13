@@ -9,16 +9,16 @@ document.addEventListener("DOMContentLoaded", function() {
     let backgrounSounds = document.querySelector("#backgrounSounds");
     // backgrounSounds.play();
     let cardSound = document.querySelector("#cardSound");
-    cardSound.play()
+    
     let sounds = document.querySelector("#sounds");
-    sounds.play();
+    
     let playing = document.querySelector(".playing");
     
 
     // Create a catch function to identify the possible error and add a click event listener since it does not allow initializing the music without user interaction.
-    backgrounSounds.play().catch(() => {
-        document.addEventListener('click', () => {
-            backgrounSounds.play();
+    playing.addEventListener('click', () => {
+        backgrounSounds.play().catch((error) => {
+            console.log('Error reproduciendo el audio:', error);
         });
     });
 
@@ -113,8 +113,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // This function retart the game
     const resetGame = () =>{
         backgrounSounds.src = "assets/Music/mr-23142.mp3";
+        backgrounSounds.play();
         backgrounSounds.volume = 0.5;
-        backgrounSounds.play()
+        
         matching = 0;
         card_1 = card_2 = "";
         disableCards = false;
