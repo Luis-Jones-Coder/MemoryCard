@@ -6,32 +6,86 @@
 
 /* Removing auto space  */
 *{
-    margin: 0;
-    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+
 }
 
-body {
+/* body {
     width: 100%;
-    font-family: "Orbitron", sans-serif;
     
-}
+} */
 
 /* styling the background image */
 .img-container {
+    min-height: 100vh;
     background-image: url(../image/hero.png);
-    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* Styling the container for the phrases located inside */
 .inner-container{
     text-align: center;
-    position: absolute;
-    width: 100%;
+    
+    
     color: white;
     height: auto;
-    margin-top: 200px;
+
 
 }
+
+h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+/* Giving sizes and adding some space */
+p {
+    margin-top: 10px;
+    font-size: 22px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+a{
+    margin-top: 10px;
+}
+.btn {
+    display: inline-block;
+    width: 200px;
+    font-weight: bold;
+    padding: 10px;
+    color: #fff;
+    border: 4px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+.btn:hover,.btn:active{
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s ease-in, color 0.3 ease-in;
+}
+
+/* Make it responsive */
+@media only screen and (max-width:600px){
+    .inner-container{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    p{
+        
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    
+} 
