@@ -55,9 +55,13 @@ document.addEventListener("DOMContentLoaded", function() {
             num_matching.innerHTML = matching;
             if (matching == 8){
                 // The function of the timeout is to give a second before resetting the cards
+                sounds.src = "assets/Music/victorymale-version-230553.mp3";
+                sounds.volume = 0.5;
+                sounds.play()
                 setTimeout(() => {
+                    
                     return resetGame();
-                }, 1000);
+                }, 1500);
                 
             }
             // Remove the event listener so that it cannot be clicked
@@ -83,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Remove the "move" class and add the "flip" class after 1500ms
         setTimeout(() => {
+           
             card_1.classList.remove("move", "flip");
             card_2.classList.remove("move", "flip");
 
