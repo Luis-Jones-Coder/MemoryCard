@@ -18,7 +18,9 @@ body {
     justify-content: center;
     min-height: 100vh;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(95,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background-color: #d49e2f
+
+    ;
     box-sizing: border-box;
 }
 
@@ -32,6 +34,8 @@ body {
     background-color: #fff;
     border-radius: 15px;
     padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 60px;
 }
 
 /* Card section */
@@ -49,6 +53,7 @@ body {
     height: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
+    
     
     	 
 }
@@ -111,6 +116,14 @@ body {
 
 .card.move {
     animation: move 0.35s ease-in-out;
+}
+.game-container h2{
+    
+    margin-bottom: 8px;
+}
+.game-container h2 button{
+    margin-left: 30px;
+    margin-bottom: 12px;
 }
 
 /* creating animation for whe we fail on maching the cards */

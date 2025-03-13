@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
     cardSound.play()
     let sounds = document.querySelector("#sounds");
     sounds.play();
+    let playing = document.querySelector(".playing");
     
+
     // Create a catch function to identify the possible error and add a click event listener since it does not allow initializing the music without user interaction.
     backgrounSounds.play().catch(() => {
         document.addEventListener('click', () => {
@@ -20,18 +22,30 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    cardSound.play().catch(() => {
-        document.addEventListener('click', () => {
-            cardSound.play();
+   
+    // cardSound.play().catch(() => {
+        // cards.addEventListener('click', () => {
+        //     cardSound.play();
+        // });
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                cardSound.play().catch((error) => {
+                    console.log('Error reproduciendo el sonido de la carta:', error);
+                });
+            });
         });
-    });
+    // });
 
-
-    
-    
-
-    
-      
+    const music = (e) => {
+        if (backgrounSounds.volume == 0.0) {
+            backgrounSounds.volume = 0.5; 
+            playing.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>'; 
+        } else {
+            backgrounSounds.volume = 0.0; 
+            playing.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+        }
+    };
+     playing.addEventListener("click", music);
 
     // Compare if the images are the same and if they are, clear card_1 and card_2 so that the images remain flipped and stop rotating
     const comparing = (imagen1, imagen2) => {
@@ -126,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function() {
             card.addEventListener('click', flipIt);
         });
     }
+    
 
     resetGame();
 
