@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         cards.forEach(card => {
             card.addEventListener('click', () => {
                 cardSound.play().catch((error) => {
-                    console.log('Error reproduciendo el sonido de la carta:', error);
+                    console.log('Erro playing the music:', error);
                 });
             });
         });
