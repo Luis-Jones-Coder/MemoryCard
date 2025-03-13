@@ -24,6 +24,15 @@ body {
     box-sizing: border-box;
 }
 
+h2 {
+    
+    /* font-size: 65px; */
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+
 
 /* Game-container section */
 
@@ -90,7 +99,9 @@ body {
 /* sizing and styling the question mark icon */
 .card .front-view span {
    font-size: 45px;
-   color: rgb(131,58,180);
+   color: #d49e2f;
+
+   ;
    
 }
 
@@ -113,17 +124,28 @@ body {
     max-width: 45px;
     
 }
-
+/* Adding esfect move  */
 .card.move {
     animation: move 0.35s ease-in-out;
 }
 .game-container h2{
-    
-    margin-bottom: 8px;
+    color: #d49e2f;
+    margin-bottom: 5px;
 }
-.game-container h2 button{
+
+/* Styling the volume button */
+.game-container h2 > button{
+    border: none;
+    background-color: #fff; 
     margin-left: 30px;
-    margin-bottom: 12px;
+    margin-right: 30px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.game-container h2 button:hover{
+    transform: scale(1.5);
+    color: #d49e2f;
+
 }
 
 /* creating animation for whe we fail on maching the cards */
@@ -144,3 +166,13 @@ body {
         transform: translateX(8px);
     }
 }
+
+/* making the game responsive */
+@media only screen and (max-width:600px){
+    .game-container{
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-bottom: 90px;
+    }
+    
+} 

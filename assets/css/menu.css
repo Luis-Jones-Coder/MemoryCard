@@ -32,18 +32,13 @@
 /* Styling the container for the phrases located inside */
 .inner-container{
     text-align: center;
-    
-    
     color: white;
     height: auto;
 
 
 }
 
-h1 {
-    font-size: 65px;
-    margin-bottom: 20px;
-}
+
 
 /* Giving sizes and adding some space */
 p {
@@ -86,6 +81,4 @@ a{
         margin-left: 10px;
         margin-right: 10px;
     }
-    
-    
 } 
