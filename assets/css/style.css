@@ -132,6 +132,16 @@ h2 {
     color: #d49e2f;
     margin-bottom: 5px;
 }
+.game-container h2 a {
+   
+    text-decoration: none;
+    color: #f2ba4b;
+    cursor: pointer;
+}
+
+.game-container h2 a:hover {
+    color: rgb(252, 127, 3);
+}
 
 /* Styling the volume button */
 .game-container h2 > button{
