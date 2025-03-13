@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let matching = 0;
     // Getting the audios from html
     let backgrounSounds = document.querySelector("#backgrounSounds");
-    backgrounSounds.play();
+    // backgrounSounds.play();
     let cardSound = document.querySelector("#cardSound");
     cardSound.play()
     let sounds = document.querySelector("#sounds");
@@ -23,10 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
    
-    // cardSound.play().catch(() => {
-        // cards.addEventListener('click', () => {
-        //     cardSound.play();
-        // });
+    
         cards.forEach(card => {
             card.addEventListener('click', () => {
                 cardSound.play().catch((error) => {
@@ -34,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             });
         });
-    // });
+
 
     const music = (e) => {
         if (backgrounSounds.volume == 0.0) {
