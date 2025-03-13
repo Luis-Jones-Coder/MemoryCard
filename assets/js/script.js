@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Getting the audios from html
     let backgrounSounds = document.querySelector("#backgrounSounds");
     backgrounSounds.play();
+    let cardSound = document.querySelector("#cardSound");
+    cardSound.play()
     let sounds = document.querySelector("#sounds");
-    sounds.play()
+    sounds.play();
     
     // Create a catch function to identify the possible error and add a click event listener since it does not allow initializing the music without user interaction.
     backgrounSounds.play().catch(() => {
@@ -17,6 +19,13 @@ document.addEventListener("DOMContentLoaded", function() {
             backgrounSounds.play();
         });
     });
+
+    cardSound.play().catch(() => {
+        document.addEventListener('click', () => {
+            cardSound.play();
+        });
+    });
+
 
     
     
