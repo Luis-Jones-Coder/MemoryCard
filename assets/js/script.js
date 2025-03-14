@@ -1,10 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
     const cards = document.querySelectorAll(".card");
-    const num_matching = document.querySelector(".game-container h2 span")
+    const num_matching = document.querySelector(".game-container h2 span");
+    const movementss = document.querySelector(".game-container p span");
+
     
     let card_1, card_2;
     let disableCards = false;
     let matching = 0;
+    let movements = 0;
     // Getting the audios from html
     let backgrounSounds = document.querySelector("#backgrounSounds");
     // backgrounSounds.play();
@@ -46,6 +49,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Compare if the images are the same and if they are, clear card_1 and card_2 so that the images remain flipped and stop rotating
     const comparing = (imagen1, imagen2) => {
+        movements++;
+        movementss.innerHTML = movements;
         if (imagen1 === imagen2) {
             sounds.src = "assets/Music/correct-6033.mp3";
             sounds.volume = 0.5;
@@ -62,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     
                     return resetGame();
                 }, 1500);
+
                 
             }
             // Remove the event listener so that it cannot be clicked
@@ -70,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
             card_1 = card_2 = "";
 
-            
             return disableCards = false;
         }
 
@@ -121,10 +126,13 @@ document.addEventListener("DOMContentLoaded", function() {
         backgrounSounds.play();
         backgrounSounds.volume = 0.5;
         
+        // this code is to reset the movements matching and the cards to initial
+        movements = 0;
         matching = 0;
         card_1 = card_2 = "";
         disableCards = false;
         num_matching.innerHTML = matching;
+        movementss.innerHTML = movements;
 
         // Creating the array to obtain random numbers with the Math.random function
         let numbers = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
