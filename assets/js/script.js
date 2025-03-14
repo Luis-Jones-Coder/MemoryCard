@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 document.addEventListener("DOMContentLoaded", function() {
     const cards = document.querySelectorAll(".card");
     const num_matching = document.querySelector(".game-container h2 span");
@@ -10,11 +12,12 @@ document.addEventListener("DOMContentLoaded", function() {
     let movements = 0;
     // Getting the audios from html
     let backgrounSounds = document.querySelector("#backgrounSounds");
+    backgrounSounds.removeAttribute("muted");
     // backgrounSounds.play();
     let cardSound = document.querySelector("#cardSound");
-    
+    cardSound.removeAttribute("muted");
     let sounds = document.querySelector("#sounds");
-    
+    sounds.removeAttribute("muted");
     let playing = document.querySelector(".playing");
     
 
@@ -37,8 +40,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     const music = (e) => {
+        
         if (backgrounSounds.volume == 0.0) {
             backgrounSounds.volume = 0.5; 
+
             playing.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>'; 
         } else {
             backgrounSounds.volume = 0.0; 
@@ -54,15 +59,15 @@ document.addEventListener("DOMContentLoaded", function() {
         if (imagen1 === imagen2) {
             sounds.src = "assets/Music/correct-6033.mp3";
             sounds.volume = 0.5;
-            sounds.play()
+            sounds.play();
             // Each time we match a card, +1 will be added to the variable.
-            matching++
+            matching++;
             num_matching.innerHTML = matching;
             if (matching == 8){
                 // The function of the timeout is to give a second before resetting the cards
                 sounds.src = "assets/Music/victorymale-version-230553.mp3";
                 sounds.volume = 0.5;
-                sounds.play()
+                sounds.play();
                 setTimeout(() => {
                     
                     return resetGame();
@@ -86,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             sounds.src = "assets/Music/error-8-206492.mp3";
             sounds.volume = 0.5;
-            sounds.play()
+            sounds.play();
 
         }, 500);
 
@@ -147,10 +152,10 @@ document.addEventListener("DOMContentLoaded", function() {
             // Obtaining the images of the cards
             let img = card.querySelector("img");
             // Using the image attribute to add the numbers array with an index that would already provide the random number, so that our cards appear in different positions.
-            img.src = `assets/image/${numbers[index]}.png`
+            img.src = `assets/image/${numbers[index]}.png`;
             card.addEventListener('click', flipIt);
         });
-    }
+    };
     
 
     resetGame();

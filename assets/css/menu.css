@@ -67,7 +67,7 @@ a{
 .btn:hover,.btn:active{
     background-color: #fff;
     color: #000;
-    transition: background-color 0.3s ease-in, color 0.3 ease-in;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
 /* Make it responsive */
