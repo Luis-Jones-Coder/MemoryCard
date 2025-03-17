@@ -102,7 +102,5 @@ Monitored console logs and server responses for errors or warnings.
 - I would like to thank my Code Institute mentor, Dickv for their support throughout the development of this project.
 
 - I would like to thank the Code Institute tutor team for their assistance with troubleshooting and debugging some project issues.
-=======
 
->>>>>>> 3aff8e8bff4a4b51a507b6a24a514c94a2e27dad
 
