@@ -72,7 +72,7 @@ Impact: This caused a poor user experience on devices with varying screen dimens
 Use CSS media queries to adjust the layout and card dimensions based on screen size.
 
 **HTML validator WRC**
-I have used the recommended html[validator WRC](assets\image\gameGameIndex.png) to validate all of my hml files.
+I have used the recommended html [validator WRC](assets\image\gameGameIndex.png) to validate all of my hml files.
 
 **CSS validator WRC**
 I have used the recommended css [validator WRC](assets\image\validatorCssGame.png) to validate all of my cssvfiles.
