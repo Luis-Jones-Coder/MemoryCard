@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 setTimeout(() => {
                     
                     return resetGame();
-                }, 1500);
+                }, 2500);
 
                 
             }

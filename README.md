@@ -1,3 +1,4 @@
+
 # MEMORY FRUITS >> Project.
 
 ## Memory Fruits - How It Was Created.
@@ -71,13 +72,13 @@ Impact: This caused a poor user experience on devices with varying screen dimens
 Use CSS media queries to adjust the layout and card dimensions based on screen size.
 
 **HTML validator WRC**
-I have used the recommended css [validator WRC](https://jigsaw.w3.org/css-validator/#validate_by_input) to validate all of my css files.
+I have used the recommended css [validator WRC](assets\image\gameGameIndex.png) to validate all of my hml files.
 
 **CSS validator WRC**
-I have used the recommended html [validator WRC](https://validator.w3.org/#validate_by_input) to validate all of my html files.
+I have used the recommended html [validator WRC](assets\image\validatorCssGame.png) to validate all of my cssvfiles.
 
 **JShint Validator**
-I have used the recommended [JShint Validator](https://jshint.com/) to validate all of my JS files.
+I have used the recommended [JShint Validator](assets\image\validatorJavascript.png) to validate all of my JS files.
 
 ### Deployment
 **Code Review:** Ensured all code is clean, error-free, and well-documented.
@@ -101,3 +102,5 @@ Monitored console logs and server responses for errors or warnings.
 - I would like to thank my Code Institute mentor, Dickv for their support throughout the development of this project.
 
 - I would like to thank the Code Institute tutor team for their assistance with troubleshooting and debugging some project issues.
+
+
